@@ -53,8 +53,8 @@ function showData(data){
       <ul class="test">
           ${data.objects.map(
               code => `
-              <li><span>
-              <strong>${code.event}</strong>
+              <li class="list"><span>
+              <strong>${code.event.toUpperCase()}</strong>
               - ${code.resource.name}
               </span>
               <h3 class="btn"><a href="${code.href}" target="_blank"><img class = "comp_icon" src = "${findPlatform(code.resource.name)}"></a></h3>

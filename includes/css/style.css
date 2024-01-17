@@ -85,6 +85,12 @@ nav {
   width: 100%;
 }
 
+.contestinfo>p{
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
 .ongoingcontestheader h2
 {
     padding: 0.5rem;
@@ -103,21 +109,7 @@ nav {
   width: 40px;
 }
 
-
-
-
-
-
-
-
-/* .btn {
-    background-color: #50c9e7;
-    border: 0;
-    border-radius: 10px;
-    color: rgb(0, 0, 0);
-    padding: 10px 10px;
-  } */
-.btn:hover{
+.comp_icon:hover{
     scale: 1.1;
     transition: scale 0.5s;
   }
@@ -140,7 +132,6 @@ nav {
   
   .container {
     margin: 30px auto;
-    /* max-width: 100%; */
     width: 50%;
   }
   
@@ -175,3 +166,12 @@ nav {
     transition: background 1s box-shadow 1s ease-in-out;
   }
   
+  .list{
+    padding: 10px;
+  }
+
+  .list:hover{
+    background-color: #fff0c2;
+    border-radius: 10px;
+    transition: background 0.5s;
+  }
