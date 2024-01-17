@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-width: 550px;
+  background-color: rgb(32, 33, 36);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F3B604;
+  padding: 0.8rem 0.8rem 0.5rem 0.8rem;
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  width: 98%;
+  margin: 0 5px 5px 5px;
+  border-radius: 10px;
+}
+
+.leftnav {
+  display: flex;
+}
+
+.leftnav a {
+  margin-right: 25px;
+}
+
+#seticon {
+  transition: transform 1s;
+}
+
+#seticon:hover {
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+#giticon:hover {
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.drawer-body {
+  font-family: 'Poppins', sans-serif;
+  height: 480px;
+  width: 500px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+      transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+      transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+      transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+      transform: translate3d(4px, 0, 0);
+  }
+}
+
+.rightnav img {
+  margin: 0px 1.5rem;
+}
+
+
+.contestinfo {
+  background-color: rgb(32, 33, 36);
+  position: relative;
+  top: 58px;
+  width: 100%;
+}
+
+.ongoingcontestheader h2
+{
+    padding: 0.5rem;
+    color: white;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.ongoingcontestheader {
+    display: flex;
+    justify-content: center;
+}
+
+.comp_icon{
+  height: 40px;
+  width: 40px;
+}
+
+
+
+
+
+
+
+
+/* .btn {
+    background-color: #50c9e7;
+    border: 0;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    padding: 10px 10px;
+  } */
+.btn:hover{
+    scale: 1.1;
+    transition: scale 0.5s;
+  }
+  
+  ul.test {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  a{
+    text-decoration: none;  
+  }
+  
+  ul.test li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  .container {
+    margin: 30px auto;
+    /* max-width: 100%; */
+    width: 50%;
+  }
+  
+  .container h2 {
+    font-weight: 300;
+  }
+  
+  .container p {
+    text-align: center;
+  }
+  
+  .centered {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .centered button {
+    transform: scale(1.3);
+    margin: 15px;
+  }
+
+  .box{
+    background-color: antiquewhite;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: background 1s;
+  }
+  .box:hover{
+    background-color: rgb(211, 255, 240);
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.15);
+    transition: background 1s box-shadow 1s ease-in-out;
+  }
+  
