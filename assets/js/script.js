@@ -127,7 +127,8 @@ function showData(data){
               code => `
               <li class="list"><span>
               <strong>${code.event.toUpperCase()}</strong>
-              - <span class="comp_name">${findPlatformTitle(code.resource.name)}</span>
+              - <span class="comp_name">${findPlatformTitle(code.resource.name)}</span> 
+              <span class="comp_date"><img src = "./assets/icons/calender.jpg"  onclick = "alert('${code.start}')"></span>
               </span>
               <h3><a href="${code.href}" target="_blank"><img class = "comp_icon" src = "${findPlatform(code.resource.name)}"></a></h3>
               </li>

@@ -102,6 +102,17 @@ body {
   border-radius:100%;
 }
 
+.comp_date>img{
+  height: 20px;
+  width: 20px;
+  background-color: #52514e;
+  margin-left: 5px;
+  border-radius:100%;
+}
+.comp_date>img:hover{
+  cursor: pointer;
+}
+
 .comp_icon:hover{
     scale: 1.1;
     transition: scale 0.5s;
