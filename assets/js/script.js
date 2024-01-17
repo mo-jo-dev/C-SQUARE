@@ -47,6 +47,24 @@ function findPlatform(data){
   }
 }
 
+function findPlatformTitle(data){
+  if(data == 'codeforces.com'){
+    return 'CodeForces'
+  }
+  if(data == 'codingninjas.com/codestudio'){
+    return 'CodingNinjas'
+  }
+  if(data == 'atcoder.jp'){
+    return 'AtCoder'
+  }
+  if(data == 'codechef.com'){
+    return 'Codechef'
+  }
+  if(data == 'dmoj.ca'){
+    return 'DMOJ'
+  }
+}
+
 function showData(data){
     result.innerHTML = `
     <div class="box">
@@ -55,7 +73,7 @@ function showData(data){
               code => `
               <li class="list"><span>
               <strong>${code.event.toUpperCase()}</strong>
-              - ${code.resource.name}
+              - <span class="comp_name">${findPlatformTitle(code.resource.name)}</span>
               </span>
               <h3 class="btn"><a href="${code.href}" target="_blank"><img class = "comp_icon" src = "${findPlatform(code.resource.name)}"></a></h3>
               </li>

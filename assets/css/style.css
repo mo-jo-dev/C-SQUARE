@@ -169,5 +169,13 @@ body {
   }
 
   .list:hover .comp_icon{
-    background-color: #000;
+    background-color: white;
+  }
+
+  .list:hover .comp_name{
+    color: red;
+  }
+
+  .comp_name{
+    color: rgb(212, 79, 79);
   }
