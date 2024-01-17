@@ -23,7 +23,7 @@ function padTo2Digits(num) {
 // const apiURL = "https://clist.by";
 
 async function getData() {
-    const res = await fetch(`https://clist.by:443/api/v1/contest/?username=mo-jo-dev&api_key=0965da70e684b0485eedc5cf7209098afe12519a&limit=15&offset=0&start__gte=${formatDate(new Date())}&order_by=start&duration__lt=999999`);
+    const res = await fetch(`https://cors-anywhere.herokuapp.com/https://clist.by:443/api/v1/contest/?username=mo-jo-dev&api_key=0965da70e684b0485eedc5cf7209098afe12519a&limit=15&offset=0&start__gte=${formatDate(new Date())}&order_by=start&duration__lt=999999`);
     const data = await res.json();
     console.log(data);
     showData(data);
@@ -82,6 +82,20 @@ function showData(data){
       </ul>
     </div>
     `;
+
+    if(data.prev || data.next){
+      more.innerHTML = `
+      ${data.prev ? `<button class="btn" onclick="getMoreTests('${data.prev}')">Prev</button>` : ''}
+      ${data.next ? `<button class="btn" onclick="getMoreTests('${data.next}')">Next</button>` : ''}
+      `;
+  }
+}
+
+
+async function getMoreSongs(url){
+  const res = await fetch(`https://cors-anywhere.herokuapp.com/${url}`);
+  const data = await res.json();
+  showData(data);
 }
 
 getData();
