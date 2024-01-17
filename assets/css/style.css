@@ -13,7 +13,7 @@ body {
   margin: 20px;
   display: flex;
   justify-content: space-between;
-  background-color: #F3B604;
+  background-color: #f7c93f;
   padding: 0.8rem 0.8rem 0.5rem 0.8rem;
   top: 0;
   z-index: 100;
@@ -75,13 +75,12 @@ body {
 .contestinfo {
   background-color: rgb(32, 33, 36);
   position: relative;
-  top: 58px;
   width: 100%;
 }
 
 .contestinfo>p{
   text-align: center;
-  color: white;
+  color: rgb(255, 157, 157);
   font-weight: bold;
 }
 
