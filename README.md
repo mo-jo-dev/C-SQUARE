@@ -1,1 +1,0 @@
-# Coding_contests_chrome_extension
