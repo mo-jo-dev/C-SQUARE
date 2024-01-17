@@ -23,9 +23,9 @@ function padTo2Digits(num) {
 // const apiURL = "https://clist.by";
 
 async function getData() {
-    const res = await fetch(`https://cors-anywhere.herokuapp.com/https://clist.by:443/api/v1/contest/?username=mo-jo-dev&api_key=0965da70e684b0485eedc5cf7209098afe12519a&limit=15&offset=0&start__gte=${formatDate(new Date())}&order_by=start&duration__lt=999999`);
+    const res = await fetch(`https://clist.by:443/api/v1/contest/?username=mo-jo-dev&api_key=0965da70e684b0485eedc5cf7209098afe12519a&limit=15&offset=0&start__gte=${formatDate(new Date())}&order_by=start&duration__lt=999999`);
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
     showData(data);
 }
 
@@ -45,6 +45,36 @@ function findPlatform(data){
   if(data == 'dmoj.ca'){
     return 'assets/img/dmoj.png'
   }
+  if(data == 'cups.online'){
+    return 'assets/img/allcup.svg'
+  }
+  if(data == 'yukicoder.me'){
+    return 'assets/img/yukicoder.png'
+  }
+  if(data == 'hackerearth.com'){
+    return 'assets/img/HackerEarth.png'
+  }
+  if(data == 'topcoder.com'){
+    return 'assets/img/topcoder.png'
+  }
+  if(data == 'geeksforgeeks.org'){
+    return 'assets/img/GeeksforGeeks.png'
+  }
+  if(data == 'tlx.toki.id'){
+    return 'assets/img/tlx.png'
+  }
+  if(data == 'leetcode.com'){
+    return 'assets/img/LeetCode.png'
+  }
+  if(data == 'ctftime.org'){
+    return 'assets/img/ctf_time.svg'
+  }
+  if(data == 'hackerrank.com'){
+    return 'assets/img/hackerrank.svg'
+  }
+  if(data == 'robocontest.uz'){
+    return 'assets/img/hackerrank.svg'
+  }
 }
 
 function findPlatformTitle(data){
@@ -63,6 +93,30 @@ function findPlatformTitle(data){
   if(data == 'dmoj.ca'){
     return 'DMOJ'
   }
+  if(data == 'cups.online'){
+    return 'All Cups'
+  }
+  if(data == 'yukicoder.me'){
+    return 'YukiCoder'
+  }
+  if(data == 'hackerearth.com'){
+    return 'HackerEarth'
+  }
+  if(data == 'topcoder.com'){
+    return 'TopCoder'
+  }
+  if(data == 'geeksforgeeks.org'){
+    return 'GeeksForGeeks'
+  }
+  if(data == 'tlx.toki.id'){
+    return 'TLX'
+  }
+  if(data == 'leetcode.com'){
+    return 'LeetCode'
+  }
+  if(data == 'ctftime.org'){
+    return 'CTF Time'
+  }
 }
 
 function showData(data){
@@ -75,25 +129,34 @@ function showData(data){
               <strong>${code.event.toUpperCase()}</strong>
               - <span class="comp_name">${findPlatformTitle(code.resource.name)}</span>
               </span>
-              <h3 class="btn"><a href="${code.href}" target="_blank"><img class = "comp_icon" src = "${findPlatform(code.resource.name)}"></a></h3>
+              <h3><a href="${code.href}" target="_blank"><img class = "comp_icon" src = "${findPlatform(code.resource.name)}"></a></h3>
               </li>
               `
           ).join('')}
       </ul>
     </div>
     `;
-
-    if(data.prev || data.next){
-      more.innerHTML = `
-      ${data.prev ? `<button class="btn" onclick="getMoreTests('${data.prev}')">Prev</button>` : ''}
-      ${data.next ? `<button class="btn" onclick="getMoreTests('${data.next}')">Next</button>` : ''}
+    // if(data.meta.offset - 15 >= 0) {
+    //   const url_off_g = data.meta.offset - 15;
+    // } else {
+    //   alert("No Data Found");
+    // }
+    // if(data.meta.offset + 15 <= 45) {
+    //   const url_off_l = data.meta.offset + 15;
+    // } else {
+    //   alert("No Data Found");
+    // }
+    if(true){
+    more.innerHTML = `
+      ${data.meta.offset - 15 >= 0 ? `<button class="btn" onclick="getMoreTests('${data.meta.offset - 15}')">Prev</button>` : ''}
+      ${data.meta.offset + 15 <= 45 ? `<button class="btn" onclick="getMoreTests('${data.meta.offset + 15}')">Next</button>` : ''}
       `;
-  }
+    }
 }
 
 
-async function getMoreSongs(url){
-  const res = await fetch(`https://cors-anywhere.herokuapp.com/${url}`);
+async function getMoreTests(url_offset){
+  const res = await fetch(`https://clist.by:443/api/v1/contest/?username=mo-jo-dev&api_key=0965da70e684b0485eedc5cf7209098afe12519a&limit=15&offset=${url_offset}&start__gte=${formatDate(new Date())}&order_by=start&duration__lt=999999`);
   const data = await res.json();
   showData(data);
 }
