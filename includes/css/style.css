@@ -172,6 +172,6 @@ nav {
 
   .list:hover{
     background-color: #fff0c2;
-    border-radius: 10px;
-    transition: background 0.5s;
+    border-radius: 20px;
+    /* transition: background 1s; */
   }
