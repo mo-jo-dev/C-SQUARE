@@ -6,25 +6,19 @@
 }
 
 body {
-  min-width: 550px;
   background-color: rgb(32, 33, 36);
 }
 
-nav {
+.header {
+  margin: 20px;
   display: flex;
   justify-content: space-between;
   background-color: #F3B604;
   padding: 0.8rem 0.8rem 0.5rem 0.8rem;
   top: 0;
   z-index: 100;
-  position: fixed;
-  width: 98%;
   margin: 0 5px 5px 5px;
   border-radius: 10px;
-}
-
-.leftnav {
-  display: flex;
 }
 
 .leftnav a {
@@ -93,16 +87,12 @@ nav {
 
 .ongoingcontestheader
 {
+    text-align: center;
     padding: 0.5rem;
     color: white;
     font-weight: bolder;
     font-size: x-large;
 }
-
-/* .ongoingcontestheader {
-    display: flex;
-    justify-content: center;
-} */
 
 .comp_icon{
   height: 50px;
@@ -157,7 +147,6 @@ nav {
   }
 
   .box{
-    /* background-color: antiquewhite; */
     padding: 20px;
     color: white;
     margin: 20px;
@@ -165,7 +154,6 @@ nav {
     transition: background 1s;
   }
   .list:hover{
-    /* background-color: rgb(211, 255, 240); */
     color: black;
     box-shadow: 0 0 5px 5px rgba(0,0,0,0.15);
     transition: background 1s box-shadow 1s ease-in-out;
@@ -178,7 +166,6 @@ nav {
   .list:hover{
     background-color: #fff0c2;
     border-radius: 20px;
-    /* transition: background 1s; */
   }
 
   .list:hover .comp_icon{

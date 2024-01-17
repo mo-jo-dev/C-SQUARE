@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const axios = require('axios');
 const app = express();
-const PORT = require('./config/serverConfig');
+const {PORT} = require('./config/serverConfig');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
