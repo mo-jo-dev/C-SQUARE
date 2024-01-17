@@ -91,7 +91,7 @@ nav {
   font-weight: bold;
 }
 
-.ongoingcontestheader h2
+.ongoingcontestheader
 {
     padding: 0.5rem;
     color: white;
@@ -99,14 +99,17 @@ nav {
     font-size: x-large;
 }
 
-.ongoingcontestheader {
+/* .ongoingcontestheader {
     display: flex;
     justify-content: center;
-}
+} */
 
 .comp_icon{
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
+  background-color: #fff0c2;
+  padding: 5px;
+  border-radius:100%;
 }
 
 .comp_icon:hover{
@@ -154,14 +157,16 @@ nav {
   }
 
   .box{
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     padding: 20px;
+    color: white;
     margin: 20px;
     border-radius: 10px;
     transition: background 1s;
   }
-  .box:hover{
-    background-color: rgb(211, 255, 240);
+  .list:hover{
+    /* background-color: rgb(211, 255, 240); */
+    color: black;
     box-shadow: 0 0 5px 5px rgba(0,0,0,0.15);
     transition: background 1s box-shadow 1s ease-in-out;
   }
@@ -174,4 +179,8 @@ nav {
     background-color: #fff0c2;
     border-radius: 20px;
     /* transition: background 1s; */
+  }
+
+  .list:hover .comp_icon{
+    background-color: #000;
   }
