@@ -128,14 +128,20 @@ function showData(data){
               <li class="list"><span>
               <strong>${code.event.toUpperCase()}</strong>
               - <span class="comp_name">${findPlatformTitle(code.resource.name)}</span> 
-              <span class="comp_date"><img src = "./assets/icons/calender.jpg"  onclick = "alert('${code.start}')"></span>
+                  <span id="myBtn" class="comp_date"><img src = "./assets/icons/calender.jpg"></span>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>Some text in the Modal..</p>
+                        </div>
+                    </div>
               </span>
               <h3><a href="${code.href}" target="_blank"><img class = "comp_icon" src = "${findPlatform(code.resource.name)}"></a></h3>
               </li>
               `
           ).join('')}
       </ul>
-    </div>
+      </div>
     `;
     // if(data.meta.offset - 15 >= 0) {
     //   const url_off_g = data.meta.offset - 15;
