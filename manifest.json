@@ -1,0 +1,11 @@
+{
+    "name": "C-Square",
+    "version": "1.0.0",
+    "description": "list of upcoming coding competitions",
+    "manifest_version": 3,
+    "author": "Mohit Joshi",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Upcoming Coding Events"
+    }
+}
